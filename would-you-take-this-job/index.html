@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#22242D">
+<title>Would You Take This Job? | Archie's Interactive Learning Lab</title>
+<style>
+:root{--dark:#22242D;--copper:#B98562;--cream:#F5F2EF;--muted:#64616A;--line:#e5ddd7}*{box-sizing:border-box}body{margin:0;background:#eeeae6;color:var(--dark);font:16px/1.6 "DejaVu Sans",Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--copper);outline-offset:2px}.shell{max-width:1120px;margin:auto;background:white;min-height:100vh;box-shadow:0 8px 55px #22242d16}.hero{background:var(--dark);color:white;padding:32px clamp(20px,5vw,64px);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-120px;top:-160px;width:390px;height:390px;border:1px solid #b9856250;border-radius:50%;pointer-events:none}.brand,.eyebrow{font-weight:800;letter-spacing:2px;font-size:12px;color:var(--copper);text-transform:uppercase}.hero h1{font-size:clamp(32px,5.5vw,57px);line-height:1.1;margin:25px 0 15px;max-width:800px}.hero em{color:var(--copper);font-style:normal}.hero p{max-width:750px;color:#e0dbd8}.chips,.actions,.case-meta{display:flex;flex-wrap:wrap;gap:9px}.chip{border:1px solid #b98562;padding:5px 12px;border-radius:99px;font-size:12px;color:white}.progressrow{display:flex;justify-content:space-between;margin-top:24px;font-size:13px}.track{height:10px;background:#4b4a4c;border-radius:99px;overflow:hidden;margin-top:8px}.fill{height:100%;width:0;background:var(--copper);transition:width .3s}.topnav{display:flex;gap:8px;overflow-x:auto;padding:16px clamp(18px,4vw,45px);background:#faf8f6;border-bottom:1px solid var(--line)}.tab{flex:0 0 auto;border:1px solid #ddd2c9;border-radius:10px;background:white;padding:10px 12px;font-size:13px;font-weight:700;color:var(--dark)}.tab.active{background:var(--dark);color:white}.tab.done:after{content:" ✓";color:var(--copper)}main{padding:30px clamp(18px,5vw,64px) 60px;min-height:620px}.mission{display:none}.mission.active{display:block}.mission h2{font-size:clamp(25px,4vw,37px);line-height:1.2;margin:10px 0}.lead{font-size:17px;color:#56525a;max-width:850px}.card{border:1px solid var(--line);border-radius:16px;padding:22px;margin:17px 0;background:white}.card.soft,.soft{background:var(--cream)}.card.dark{background:var(--dark);color:white}.card.dark h2{color:white}.card h3{margin-top:0}.pt{background:#f7eee7;border-left:4px solid var(--copper);padding:12px 15px;border-radius:0 9px 9px 0;color:#65554c;font-size:14px;margin:18px 0}.tag{display:inline-block;color:#976747;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.subtle{color:var(--muted);font-size:14px}.btn{background:var(--dark);color:white;border:0;border-radius:10px;padding:12px 18px;font-weight:700}.btn:hover{filter:brightness(1.16)}.btn.secondary{background:#f2ebe6;color:var(--dark);border:1px solid #ded3ca}.btn.copper{background:var(--copper);color:#222}.actions{margin:18px 0}.reveal{display:none}.reveal.show{display:block}.choice,.option{display:block;width:100%;text-align:left;background:white;border:1px solid #ddd2c9;border-radius:11px;padding:13px;margin:9px 0;color:var(--dark)}.choice:hover,.option:hover,.option.picked{border-color:var(--copper);background:#fcf5ed}.choice.correct{background:#e8f6ec;border-color:#438c62}.choice.incorrect{background:#fff0ee;border-color:#c56a63}.feedback{padding:13px;border-radius:10px;background:#f5f2ef;margin:12px 0}.feedback.good{background:#e8f6ec}.feedback.bad{background:#fff0ee}.response{background:#22242d;color:white;border-radius:12px;padding:17px;margin-top:12px}.response strong{color:#e0b28f}textarea,input[type=text]{width:100%;border:1px solid #d9d0c8;border-radius:10px;padding:12px;min-height:46px;background:white;color:#222}textarea{min-height:105px;resize:vertical}label{display:block;font-weight:700;margin:13px 0 6px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.scenario{background:var(--cream);padding:18px;border-left:4px solid var(--copper);border-radius:0 12px 12px 0}.role{font-weight:800;font-size:12px;letter-spacing:1px;color:#9d6948}.pill{display:inline-block;background:#f3ece6;border-radius:99px;padding:5px 11px;font-size:12px}.score{font-size:45px;font-weight:800;color:var(--copper)}footer{text-align:center;background:var(--dark);color:#e4d8cf;padding:30px 20px;font-size:12px;line-height:2}footer strong{color:var(--copper)}.toast{position:fixed;bottom:20px;right:20px;background:var(--dark);color:white;padding:13px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .2s}.toast.show{opacity:1}details{margin:14px 0}summary{cursor:pointer;font-weight:700;padding:12px;background:#f5f2ef;border-radius:9px}@media(max-width:680px){.grid{grid-template-columns:1fr}.hero{padding:25px 20px}.card{padding:17px}main{padding:22px 18px 50px}}
+.career-table{overflow-x:auto;margin:18px 0}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+caption{text-align:left;color:var(--muted);margin-bottom:8px}
+th,td{text-align:left;vertical-align:top;padding:12px;border:1px solid var(--line)}
+thead th{background:var(--dark);color:white}
+tbody th,tbody tr:nth-child(even){background:var(--cream)}
+td:nth-child(2){white-space:nowrap}
+.eyebrow{color:#8c593a}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="hero">
+<div class="brand">EDUCATION W ARCHIE · INTERACTIVE LEARNING LAB</div>
+<h1>Would You Take <em>This Job?</em></h1>
+<p>Compare five careers, imagine how each would change your week, and defend the life you’d choose.</p>
+<div class="chips"><span class="chip">B2</span><span class="chip">YOUNG ADULTS</span><span class="chip">60–75 MIN</span><span class="chip">8 MISSIONS</span><span class="chip">SPEAKING-FIRST</span></div>
+<div class="progressrow" aria-live="polite"><span id="progressText"></span><span id="xpText"></span></div>
+<div class="track" aria-hidden="true"><div class="fill" id="progressFill"></div></div>
+</header>
+<nav class="topnav" aria-label="Missions"><button class="tab" type="button">1. Priorities</button><button class="tab" type="button">2. Career cards</button><button class="tab" type="button">3. Language</button><button class="tab" type="button">4. Life swap</button><button class="tab" type="button">5. Debate</button><button class="tab" type="button">6. Twist</button><button class="tab" type="button">7. Decision</button><button class="tab" type="button">8. Reflection</button></nav>
+<main>
+<section class="mission active" aria-labelledby="mission-1">
+<div class="eyebrow">Mission 01 · Priorities</div>
+<h2 id="mission-1" tabindex="-1">What Makes a Career Worth It?</h2>
+<p class="lead">Compare your priorities with a partner before seeing the five careers.</p>
+<p class="pt" lang="pt-BR">Compare suas prioridades e peça ao colega um exemplo concreto.</p>
+<div class="card"><p>Rank pay, predictable hours, free weekends, meaningful work, and variety. Share your top two and your deal-breaker.</p><p>Ask your partner: “What would make you change your mind?” Then explain one priority you have in common and one you weigh differently.</p></div>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-2">
+<div class="eyebrow">Mission 02 · Career cards</div>
+<h2 id="mission-2" tabindex="-1">Five Careers, Five Routines</h2>
+<p class="lead">Scan the profiles and choose two careers whose routines would affect your life in different ways.</p>
+<p class="pt" lang="pt-BR">Compare salário, horário e rotina. Use pelo menos dois detalhes da tabela.</p>
+<div class="career-table" tabindex="0" role="region" aria-label="Career comparison"><table><caption>Fictional profiles for discussion. Monthly gross pay in BRL. Actual pay and schedules vary.</caption><thead><tr><th scope="col">Career</th><th scope="col">Monthly pay</th><th scope="col">Schedule</th><th scope="col">Typical work</th><th scope="col">Upside</th><th scope="col">Trade-off</th></tr></thead><tbody><tr><th scope="row">Police officer</th><td>R$6,500</td><td>Four 12-hour shifts in an eight-day rotation. Some nights, weekends, and holidays.</td><td>Patrol a district, respond to calls, and write reports.</td><td>Public service and close teamwork.</td><td>Unpredictable calls, physical risk, and disrupted sleep.</td></tr><tr><th scope="row">Emergency doctor</th><td>R$14,000</td><td>Three 12-hour shifts per week. Nights and weekends rotate.</td><td>Assess patients, make urgent decisions, and coordinate care.</td><td>Direct impact and a high income.</td><td>Long training and emotionally demanding shifts.</td></tr><tr><th scope="row">Software developer</th><td>R$9,000</td><td>Monday to Friday, 9 a.m.–6 p.m. with a lunch break. Three days remote.</td><td>Build features, fix bugs, and review code with a team.</td><td>Hybrid work and room to specialize.</td><td>Screen-heavy days and occasional evening release support.</td></tr><tr><th scope="row">High school teacher</th><td>R$5,000</td><td>Weekdays, 7:30 a.m.–2 p.m. plus five hours of weekly planning and grading.</td><td>Teach classes, give feedback, and support teenagers.</td><td>Regular weekday routine and meaningful relationships.</td><td>Extra work during exam weeks and limited pay growth in this scenario.</td></tr><tr><th scope="row">Flight attendant</th><td>R$7,200</td><td>Early starts, late finishes, and roughly eight nights away per month.</td><td>Run cabin safety checks and help passengers during flights.</td><td>Travel, variety, and working with people.</td><td>An irregular sleep schedule and missed time at home.</td></tr></tbody></table></div><div class="card soft">Which career has the highest pay? Which gives you the most predictable week? Which looks better once you take time away from home into account? Defend your answers using the profiles.</div>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-3">
+<div class="eyebrow">Mission 03 · Language</div>
+<h2 id="mission-3" tabindex="-1">Compare, Qualify, Push Back</h2>
+<p class="lead">Use these expressions to compare careers, describe hypothetical routines, and disagree politely.</p>
+<p class="pt" lang="pt-BR">Revele as expressões e adapte os exemplos à sua realidade.</p>
+<details><summary>Weigh a trade-off · weigh up, be worth it</summary><p>“We’d need to weigh up the higher pay against the nights away.”</p><p>“The extra R$2,200 would be worth it if I still had enough time at home.”</p></details><details><summary>Imagine the routine · If I were…, I’d…</summary><p>“If I were a police officer on this rotation, I’d have to plan around night shifts.”</p><p>“Working alternating weekends would make it harder to see my friends.”</p></details><details><summary>Concede and challenge · I see your point, but…</summary><p>“I see your point about flexibility, but how much would evening support disrupt your plans?”</p><p>“I’d agree, provided that I could keep one weekend free each month.”</p></details><div class="card soft">Choose two careers. Compare one detail, imagine one consequence, and respond to a partner’s objection.</div>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-4">
+<div class="eyebrow">Mission 04 · Life swap</div>
+<h2 id="mission-4" tabindex="-1">A Week in Your New Life</h2>
+<p class="lead">Imagine doing one of these jobs for six months. Walk your partner through a workday and a day off.</p>
+<p class="pt" lang="pt-BR">Imagine sua rotina em um dia de trabalho e em um dia de folga.</p>
+<details><summary>Open the career comparison chart</summary><div class="career-table" tabindex="0" role="region" aria-label="Career comparison"><table><caption>Fictional profiles for discussion. Monthly gross pay in BRL. Actual pay and schedules vary.</caption><thead><tr><th scope="col">Career</th><th scope="col">Monthly pay</th><th scope="col">Schedule</th><th scope="col">Typical work</th><th scope="col">Upside</th><th scope="col">Trade-off</th></tr></thead><tbody><tr><th scope="row">Police officer</th><td>R$6,500</td><td>Four 12-hour shifts in an eight-day rotation. Some nights, weekends, and holidays.</td><td>Patrol a district, respond to calls, and write reports.</td><td>Public service and close teamwork.</td><td>Unpredictable calls, physical risk, and disrupted sleep.</td></tr><tr><th scope="row">Emergency doctor</th><td>R$14,000</td><td>Three 12-hour shifts per week. Nights and weekends rotate.</td><td>Assess patients, make urgent decisions, and coordinate care.</td><td>Direct impact and a high income.</td><td>Long training and emotionally demanding shifts.</td></tr><tr><th scope="row">Software developer</th><td>R$9,000</td><td>Monday to Friday, 9 a.m.–6 p.m. with a lunch break. Three days remote.</td><td>Build features, fix bugs, and review code with a team.</td><td>Hybrid work and room to specialize.</td><td>Screen-heavy days and occasional evening release support.</td></tr><tr><th scope="row">High school teacher</th><td>R$5,000</td><td>Weekdays, 7:30 a.m.–2 p.m. plus five hours of weekly planning and grading.</td><td>Teach classes, give feedback, and support teenagers.</td><td>Regular weekday routine and meaningful relationships.</td><td>Extra work during exam weeks and limited pay growth in this scenario.</td></tr><tr><th scope="row">Flight attendant</th><td>R$7,200</td><td>Early starts, late finishes, and roughly eight nights away per month.</td><td>Run cabin safety checks and help passengers during flights.</td><td>Travel, variety, and working with people.</td><td>An irregular sleep schedule and missed time at home.</td></tr></tbody></table></div></details><div class="card"><p>When would you see friends, exercise, study, or spend time with family? Give one specific example and explain what would change from your life today.</p><p>Your partner asks: “What would you miss most?” and “What might get easier after six months?” Switch careers and repeat.</p><label for="routine">Plan your two days</label><textarea id="routine" data-save="routine" placeholder="Optional speaking notes"></textarea></div>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-5">
+<div class="eyebrow">Mission 05 · Debate</div>
+<h2 id="mission-5" tabindex="-1">Defend It, Then Switch Sides</h2>
+<p class="lead">Pick a motion. Give a 45-second argument, answer one objection, then make the strongest case for the other side.</p>
+<p class="pt" lang="pt-BR">Defenda uma posição, responda a uma objeção e depois troque de lado.</p>
+<div class="card"><ul><li>A predictable schedule is worth more than an extra R$4,000 a month. Compare the teacher and developer.</li><li>The doctor’s higher pay makes up for the rotating nights. Compare the doctor and developer.</li><li>Variety at work is worth giving up predictable free time. Compare the flight attendant and police officer.</li></ul><p>Before you challenge your partner, summarize their point in one sentence. Use a schedule or pay detail to support your response.</p></div><details><summary>Open the career comparison chart</summary><div class="career-table" tabindex="0" role="region" aria-label="Career comparison"><table><caption>Fictional profiles for discussion. Monthly gross pay in BRL. Actual pay and schedules vary.</caption><thead><tr><th scope="col">Career</th><th scope="col">Monthly pay</th><th scope="col">Schedule</th><th scope="col">Typical work</th><th scope="col">Upside</th><th scope="col">Trade-off</th></tr></thead><tbody><tr><th scope="row">Police officer</th><td>R$6,500</td><td>Four 12-hour shifts in an eight-day rotation. Some nights, weekends, and holidays.</td><td>Patrol a district, respond to calls, and write reports.</td><td>Public service and close teamwork.</td><td>Unpredictable calls, physical risk, and disrupted sleep.</td></tr><tr><th scope="row">Emergency doctor</th><td>R$14,000</td><td>Three 12-hour shifts per week. Nights and weekends rotate.</td><td>Assess patients, make urgent decisions, and coordinate care.</td><td>Direct impact and a high income.</td><td>Long training and emotionally demanding shifts.</td></tr><tr><th scope="row">Software developer</th><td>R$9,000</td><td>Monday to Friday, 9 a.m.–6 p.m. with a lunch break. Three days remote.</td><td>Build features, fix bugs, and review code with a team.</td><td>Hybrid work and room to specialize.</td><td>Screen-heavy days and occasional evening release support.</td></tr><tr><th scope="row">High school teacher</th><td>R$5,000</td><td>Weekdays, 7:30 a.m.–2 p.m. plus five hours of weekly planning and grading.</td><td>Teach classes, give feedback, and support teenagers.</td><td>Regular weekday routine and meaningful relationships.</td><td>Extra work during exam weeks and limited pay growth in this scenario.</td></tr><tr><th scope="row">Flight attendant</th><td>R$7,200</td><td>Early starts, late finishes, and roughly eight nights away per month.</td><td>Run cabin safety checks and help passengers during flights.</td><td>Travel, variety, and working with people.</td><td>An irregular sleep schedule and missed time at home.</td></tr></tbody></table></div></details>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-6">
+<div class="eyebrow">Mission 06 · Twist</div>
+<h2 id="mission-6" tabindex="-1">Would One Change Change Your Mind?</h2>
+<p class="lead">Choose a career you would turn down. Reveal a change and decide whether it would move that career up your list.</p>
+<p class="pt" lang="pt-BR">Escolha uma carreira que recusaria e diga se a nova condição mudaria sua decisão.</p>
+<div class="card"><button class="btn secondary" id="twistButton" type="button">Reveal a change</button><p id="twist" aria-live="polite"></p><p>On your first turn, keep the original pay and schedule unless the card changes them. Then ask your partner what it would take to make them reconsider.</p></div><details><summary>Open the career comparison chart</summary><div class="career-table" tabindex="0" role="region" aria-label="Career comparison"><table><caption>Fictional profiles for discussion. Monthly gross pay in BRL. Actual pay and schedules vary.</caption><thead><tr><th scope="col">Career</th><th scope="col">Monthly pay</th><th scope="col">Schedule</th><th scope="col">Typical work</th><th scope="col">Upside</th><th scope="col">Trade-off</th></tr></thead><tbody><tr><th scope="row">Police officer</th><td>R$6,500</td><td>Four 12-hour shifts in an eight-day rotation. Some nights, weekends, and holidays.</td><td>Patrol a district, respond to calls, and write reports.</td><td>Public service and close teamwork.</td><td>Unpredictable calls, physical risk, and disrupted sleep.</td></tr><tr><th scope="row">Emergency doctor</th><td>R$14,000</td><td>Three 12-hour shifts per week. Nights and weekends rotate.</td><td>Assess patients, make urgent decisions, and coordinate care.</td><td>Direct impact and a high income.</td><td>Long training and emotionally demanding shifts.</td></tr><tr><th scope="row">Software developer</th><td>R$9,000</td><td>Monday to Friday, 9 a.m.–6 p.m. with a lunch break. Three days remote.</td><td>Build features, fix bugs, and review code with a team.</td><td>Hybrid work and room to specialize.</td><td>Screen-heavy days and occasional evening release support.</td></tr><tr><th scope="row">High school teacher</th><td>R$5,000</td><td>Weekdays, 7:30 a.m.–2 p.m. plus five hours of weekly planning and grading.</td><td>Teach classes, give feedback, and support teenagers.</td><td>Regular weekday routine and meaningful relationships.</td><td>Extra work during exam weeks and limited pay growth in this scenario.</td></tr><tr><th scope="row">Flight attendant</th><td>R$7,200</td><td>Early starts, late finishes, and roughly eight nights away per month.</td><td>Run cabin safety checks and help passengers during flights.</td><td>Travel, variety, and working with people.</td><td>An irregular sleep schedule and missed time at home.</td></tr></tbody></table></div></details>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-7">
+<div class="eyebrow">Mission 07 · Decision</div>
+<h2 id="mission-7" tabindex="-1">Make Your Final Ranking</h2>
+<p class="lead">Rank all five careers for yourself. Then give a 90-second verdict on your top choice and the one you’d turn down first.</p>
+<p class="pt" lang="pt-BR">Classifique as cinco carreiras e defenda sua primeira e última escolha.</p>
+<div class="card"><p>Use at least three details across pay, schedule, and lifestyle. Your partner challenges one assumption. Reply, then explain what would make you reconsider.</p><label for="ranking">Your ranking and strongest reasons</label><textarea id="ranking" data-save="ranking" placeholder="Optional speaking notes"></textarea></div><details><summary>Open the career comparison chart</summary><div class="career-table" tabindex="0" role="region" aria-label="Career comparison"><table><caption>Fictional profiles for discussion. Monthly gross pay in BRL. Actual pay and schedules vary.</caption><thead><tr><th scope="col">Career</th><th scope="col">Monthly pay</th><th scope="col">Schedule</th><th scope="col">Typical work</th><th scope="col">Upside</th><th scope="col">Trade-off</th></tr></thead><tbody><tr><th scope="row">Police officer</th><td>R$6,500</td><td>Four 12-hour shifts in an eight-day rotation. Some nights, weekends, and holidays.</td><td>Patrol a district, respond to calls, and write reports.</td><td>Public service and close teamwork.</td><td>Unpredictable calls, physical risk, and disrupted sleep.</td></tr><tr><th scope="row">Emergency doctor</th><td>R$14,000</td><td>Three 12-hour shifts per week. Nights and weekends rotate.</td><td>Assess patients, make urgent decisions, and coordinate care.</td><td>Direct impact and a high income.</td><td>Long training and emotionally demanding shifts.</td></tr><tr><th scope="row">Software developer</th><td>R$9,000</td><td>Monday to Friday, 9 a.m.–6 p.m. with a lunch break. Three days remote.</td><td>Build features, fix bugs, and review code with a team.</td><td>Hybrid work and room to specialize.</td><td>Screen-heavy days and occasional evening release support.</td></tr><tr><th scope="row">High school teacher</th><td>R$5,000</td><td>Weekdays, 7:30 a.m.–2 p.m. plus five hours of weekly planning and grading.</td><td>Teach classes, give feedback, and support teenagers.</td><td>Regular weekday routine and meaningful relationships.</td><td>Extra work during exam weeks and limited pay growth in this scenario.</td></tr><tr><th scope="row">Flight attendant</th><td>R$7,200</td><td>Early starts, late finishes, and roughly eight nights away per month.</td><td>Run cabin safety checks and help passengers during flights.</td><td>Travel, variety, and working with people.</td><td>An irregular sleep schedule and missed time at home.</td></tr></tbody></table></div></details>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button><button class="btn secondary" type="button" data-next>Next mission →</button></div>
+</section>
+<section class="mission" aria-labelledby="mission-8">
+<div class="eyebrow">Mission 08 · Reflection</div>
+<h2 id="mission-8" tabindex="-1">What Changed Your Mind?</h2>
+<p class="lead">Tell your partner which argument surprised you most. Then give each other one piece of feedback.</p>
+<p class="pt" lang="pt-BR">Compartilhe o argumento que mais fez você pensar e dê um feedback ao colega.</p>
+<div class="card"><ul><li>Did you ask a follow-up question that got a specific answer?</li><li>Did you connect a job detail to a realistic change in someone’s life?</li><li>Did you acknowledge a counterargument before responding?</li></ul><label for="reflection">One phrase you used well and one you want to try next time</label><textarea id="reflection" data-save="reflection" placeholder="Optional speaking notes"></textarea></div>
+<div class="actions"><button class="btn" type="button" data-complete>Complete mission ✓</button></div>
+</section>
+</main>
+<footer><strong>Archie’s Interactive Learning Lab</strong><br><span id="saveStatus" role="status">Progress and notes are saved in this browser.</span></footer>
+</div>
+<script>
+const key = "archies-would-you-take-this-job-v1";
+const missions = [...document.querySelectorAll(".mission")];
+const tabs = [...document.querySelectorAll(".tab")];
+const notes = [...document.querySelectorAll("[data-save]")];
+const status = document.getElementById("saveStatus");
+const twists = [
+  "Your monthly gross pay goes up by R$2,000.",
+  "Your schedule is now published six weeks in advance.",
+  "You can guarantee two consecutive days off each week.",
+  "You can swap two shifts a month with a colleague.",
+  "Your commute gets 45 minutes longer each way."
+];
+let state = { current: 0, completed: [], notes: {} };
+try {
+  const saved = JSON.parse(localStorage.getItem(key));
+  if (saved && Number.isInteger(saved.current) && missions[saved.current] &&
+      Array.isArray(saved.completed) && saved.notes && typeof saved.notes === "object") {
+    state = saved;
+  }
+} catch {
+  status.textContent = "Saved progress could not be loaded on this device.";
+}
+function save() {
+  try {
+    localStorage.setItem(key, JSON.stringify(state));
+  } catch {
+    status.textContent = "Progress cannot be saved on this device.";
+  }
+}
+function render(moveFocus = false) {
+  missions.forEach((mission, index) => {
+    const active = index === state.current;
+    mission.classList.toggle("active", active);
+    tabs[index].classList.toggle("active", active);
+    tabs[index].classList.toggle("done", state.completed.includes(index));
+    if (active) tabs[index].setAttribute("aria-current", "step");
+    else tabs[index].removeAttribute("aria-current");
+    const complete = mission.querySelector("[data-complete]");
+    complete.disabled = state.completed.includes(index);
+    complete.textContent = complete.disabled ? "Mission completed ✓" : "Complete mission ✓";
+  });
+  const count = state.completed.length;
+  document.getElementById("progressText").textContent = count + " / " + missions.length + " missions completed";
+  document.getElementById("xpText").textContent = count * 100 + " XP";
+  document.getElementById("progressFill").style.width = (count / missions.length) * 100 + "%";
+  if (moveFocus) missions[state.current].querySelector("h2").focus();
+}
+function navigate(index) {
+  state.current = index;
+  save();
+  render(true);
+}
+tabs.forEach((tab, index) => tab.addEventListener("click", () => navigate(index)));
+missions.forEach((mission, index) => {
+  mission.querySelector("[data-complete]").addEventListener("click", () => {
+    if (!state.completed.includes(index)) state.completed.push(index);
+    save();
+    render();
+    mission.querySelector("h2").focus({ preventScroll: true });
+  });
+  mission.querySelector("[data-next]")?.addEventListener("click", () => navigate(index + 1));
+});
+notes.forEach(field => {
+  field.value = state.notes[field.dataset.save] || "";
+  field.addEventListener("input", () => {
+    state.notes[field.dataset.save] = field.value;
+    save();
+  });
+});
+let twistIndex = 0;
+document.getElementById("twistButton").addEventListener("click", event => {
+  document.getElementById("twist").textContent = twists[twistIndex];
+  event.currentTarget.textContent = "Reveal another change";
+  twistIndex = (twistIndex + 1) % twists.length;
+});
+render();
+</script>
+</body>
+</html>
